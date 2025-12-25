@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title">Магазин на 3 буквы</div>
+            <button id="cartBtn">Корзина</button>
+            <button id="adminBtn">Админ Панель</button>
+            <label>
+        Категория:
+        <select id="category-filter">
+          <option value="">Всё</option>
+          <option value="MaxPrice">С большей цены</option>
+          <option value="LowPrice">С меньшей цены</option>
+        </select>
+      </label>
+        </header>
+        <div class="listProduct"></div>
+    </div>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <h3>Корзина</h3>
+            <ul id="cartList"></ul>
+            <button id="closeCart">Закрыть</button>
+            <button id="payBtn">Оплатить</button>
+        </div>
+    </div>
+    <div id="adminModal" class="cart-modal">
+        <div class="cart-content">
+            <h3>Админ Панель</h3>
+            <div id="adminProductList"></div>
+            <button id="closeAdmin">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+
+</html>

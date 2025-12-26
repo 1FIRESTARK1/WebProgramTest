@@ -50,7 +50,6 @@ filterSelect.addEventListener('change', () => {
     renderProducts(sorted);
 });
 
-// --- Админка (исправленная) ---
 const adminBtn = document.getElementById('adminBtn');
 const adminModal = document.getElementById('adminModal');
 const adminProductList = document.getElementById('adminProductList');
@@ -85,12 +84,11 @@ function saveProduct(id) {
     if (product) {
         product.name = nameInput.value.trim();
         product.price = Number(priceInput.value) || 0;
-        renderProducts(products); // Обновляем отображение
+        renderProducts(products);
         alert(`Товар ID ${id} обновлён!`);
     }
 }
 
-// Кнопку "Админ Панель" мы уже добавили в HTML — просто привязываем событие
 if (adminBtn) {
     adminBtn.addEventListener('click', () => {
         renderAdminPanel();
@@ -107,7 +105,6 @@ if (closeAdmin) {
 document.getElementById('payBtn').addEventListener('click', () => {
     alert('Оплачено!');
     document.getElementById('cartModal').style.display = 'none';
-    // Очистим корзину (опционально)
     document.getElementById('cartList').innerHTML = '';
 });
 
